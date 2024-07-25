@@ -1,0 +1,20 @@
+{
+    "rules": [
+      {
+        "conditions": [
+          {"field": "From", "predicate": "contains", "value": "manish.swarnakar15@gmail.com"},
+          {"field": "Subject", "predicate": "contains", "value": "Important"}
+        ],
+        "predicate": "All",
+        "actions": ["mark_as_read"]
+      },
+      {
+        "conditions": [
+          {"field": "Received Date", "predicate": "less_than", "value": "10"}
+        ],
+        "predicate": "Any",
+        "actions": ["move_message:Archived"]
+      }
+    ]
+}
+  
